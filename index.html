@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+    <!-- Q4 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Q2 -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
@@ -9,9 +17,9 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Concert Schedule</a></li>
-        <li><a href="#">Order Tickets</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#schedule">Concert Schedule</a></li>
+        <li><a href="#getTicket">Order Tickets</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
       </ul>
     </nav>
 
@@ -26,35 +34,47 @@
 
     <!-- Main Page Content -->
     <main>
-
-    <!-- About Section -->
+      <!-- About Section -->
       <section id="about-sec">
-
         <h2>About.</h2>
-        <p id="about-blurb">Harry Edward Styles is an English singer, songwriter and actor.
-          His musical career began in 2010 as a solo contestant on the
-          British music competition series The X Factor.
+        <p id="about-blurb">
+          Harry Edward Styles is an English singer, songwriter and actor. His
+          musical career began in 2010 as a solo contestant on the British music
+          competition series The X Factor.
         </p>
 
         <div>
+          <!-- <figure>
+            <img
+              src="./assets/images/harrystyles.png"
+              alt="harrystyles"
+              width="1000"
+            /> -->
+          <!-- Q10a delete width attribute -->
           <figure>
-            <img src="./assets/images/harrystyles.png" alt="harrystyles" width="1000">
+            <img src="./assets/images/harrystyles.png" alt="harrystyles" />
             <!-- Figcaption element to caption your image -->
             <figcaption>
-            Harry Styles performing free concert fundraiser for US wildfire relief
-            <!-- Fake News -->
+              Harry Styles performing free concert fundraiser for US wildfire
+              relief
+              <!-- Fake News -->
             </figcaption>
           </figure>
 
-        <!-- Aside Content -->
+          <!-- Aside Content -->
           <aside>
             <p class="center-title">Facts</p>
             <ul>
-                <li>Born: February 1, 1994 (age 28 years)</li>
-                <li>From Redditch, United Kingdom</li>
-                <li>Height: 6'0"</li>
-                <li>Music Group: One Direction (since 2010)</li>
-                <li><a href="">See Movies</a></li>
+              <li>Born: February 1, 1994 (age 28 years)</li>
+              <li>From Redditch, United Kingdom</li>
+              <li>Height: 6'0"</li>
+              <li>Music Group: One Direction (since 2010)</li>
+              <!-- additional -->
+              <li>
+                <a href="https://www.imdb.com/name/nm4089170/" target=""
+                  >See Movies</a
+                >
+              </li>
             </ul>
           </aside>
         </div>
@@ -62,10 +82,9 @@
 
       <!-- Table - Concert Schedule -->
       <section id="concert-schedule-sec">
-        <h3 class="center-title">Touring</h3>
+        <h3 class="center-title" id="schedule">Touring</h3>
 
         <table>
-
           <thead>
             <tr>
               <th colspan="3">Concert Schedule</th>
@@ -104,49 +123,80 @@
               <td>Bend</td>
             </tr>
           </tbody>
-            </table>
-        </section>
+        </table>
+      </section>
 
       <!-- Order Tickets Section -->
       <section id="ticket-form-sec">
-        <h4 class="center-title">Get Tickets</h4>
+        <h4 class="center-title" id="getTicket">Get Tickets</h4>
 
         <!-- Form -->
         <form>
-
           <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder=
-  "name" required>
-          <br>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="name"
+            required
+          />
+          <br />
 
           <label for="email">Email</label>
-          <input id="email" type="text" name="email" placeholder="email" required>
-          <br>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="email"
+            required
+          />
+          <br />
 
           <label for="concert-date">Concert Date</label>
-          <input id="concert-date" type="text" name="concert-date" placeholder="mm/dd/yy" required minlength="6">
-          <br>
+          <input
+            id="concert-date"
+            type="text"
+            name="concert-date"
+            placeholder="mm/dd/yy"
+            required
+            minlength="6"
+          />
+          <br />
 
           <!--Radio button-->
           <span>Ticket delivery preference:</span>
-          <br>
-          <input id="paperless" type="radio" name="answer" value="paperless" required>
+          <br />
+          <input
+            id="paperless"
+            type="radio"
+            name="answer"
+            value="paperless"
+            required
+          />
           <label for="paperless">paperless</label>
-          <br>
-          <input id="us mail" type="radio" name="answer" value="us mail" required>
+          <br />
+          <input
+            id="us mail"
+            type="radio"
+            name="answer"
+            value="us mail"
+            required
+          />
           <label for="us mail">us mail</label>
-          <br>
+          <br />
 
-          <h4 class="center-title">Stay In Touch!</h4>
-          <p>Send us a message -- keep us up to date with new things about Harry, or tell us about your user expereince on the site.</p>
+          <h4 class="center-title" id="contact-us">Stay In Touch!</h4>
+          <p>
+            Send us a message -- keep us up to date with new things about Harry,
+            or tell us about your user expereince on the site.
+          </p>
           <!-- Textbox -->
           <label for="message"></label>
           <textarea id="message" rows="8" cols="40" required></textarea>
-          <br>
-          <input type="submit" value="Submit">
+          <br />
+          <input type="submit" value="Submit" />
         </form>
       </section>
-
     </main>
     <footer>
       <p></p>
